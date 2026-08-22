@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wedding Invitation - Join us in celebrating the wedding of Harman & Sara.">
+    <meta property="og:title" content="Harman & Sara - Wedding Invitation">
+    <meta property="og:description" content="We invite you to share in our joy as we celebrate our wedding day.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#6A1B29">
+    <title>Wedding Invitation | Harman &amp; Sara</title>
+
+    <!-- Google Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Audio Element -->
+    <audio id="wedding-audio" loop preload="auto">
+        <source src="music/wedding-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Floating Audio Control Button -->
+    <button id="music-btn" class="music-button" aria-label="Toggle Wedding Music" title="Toggle Music">
+        <svg id="music-icon-play" class="music-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="music-icon-pause" class="music-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+        <div class="music-ring"></div>
+    </button>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-wrapper">
+            <img src="images/hero.jpg" alt="Harman and Sara" class="hero-bg-img" id="hero-img" onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1920&q=80'">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="floral-divider-top" aria-hidden="true">❀ ❁ ❀</div>
+            <p class="hero-subheading animate-fade-down">Together With Their Families</p>
+            <h1 class="hero-names animate-zoom-in"><span class="config-groom">Harman</span> <span class="ampersand">&amp;</span> <span class="config-bride">Sara</span></h1>
+            <p class="hero-invitation-text animate-fade-up">are getting married</p>
+            <div class="hero-date-badge animate-fade-up">
+                <span class="badge-line"></span>
+                <span class="config-date-str">DECEMBER 20, 2026</span>
+                <span class="badge-line"></span>
+            </div>
+            <p class="hero-location-short config-venue-short">Ahmedabad, Gujarat</p>
+            <a href="#invitation" class="scroll-indicator" aria-label="Scroll to Invitation">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. Invitation Section -->
+    <section id="invitation" class="section invitation-section">
+        <div class="container">
+            <div class="card invitation-card scroll-reveal">
+                <div class="card-border-inner">
+                    <div class="floral-corner top-left"></div>
+                    <div class="floral-corner top-right"></div>
+                    <div class="floral-corner bottom-left"></div>
+                    <div class="floral-corner bottom-right"></div>
+
+                    <span class="section-tag">A Celebration of Love</span>
+                    <h2 class="section-title">The Wedding Invitation</h2>
+                    <div class="gold-ornament">✦ ✤ ✦</div>
+
+                    <div class="invitation-body">
+                        <p class="invitation-lead">With immense joy and gratitude to the Almighty, we invite you to celebrate the marriage union of</p>
+                        <h3 class="couple-title-display"><span class="config-groom">Harman</span> &amp; <span class="config-bride">Sara</span></h3>
+                        <p class="invitation-prose">
+                            As we begin this sacred journey of love, friendship, and lifelong devotion, your presence and blessings will make our special day truly unforgettable.
+                        </p>
+
+                        <div class="invitation-couple-frame">
+                            <img src="images/couple-1.jpg" alt="Couple Portrait" class="invitation-couple-img" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+
+                        <div class="invitation-details-strip">
+                            <div class="detail-item">
+                                <span class="detail-label">Date</span>
+                                <span class="detail-val config-date-str">December 20, 2026</span>
+                            </div>
+                            <div class="detail-divider"></div>
+                            <div class="detail-item">
+                                <span class="detail-label">Venue</span>
+                                <span class="detail-val config-venue-name">The Royal Palace Grand Ballroom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Countdown Timer -->
+    <section id="countdown" class="section countdown-section">
+        <div class="container text-center">
+            <span class="section-tag">Counting Down To Eternal Togetherness</span>
+            <h2 class="section-title light-title">The Big Day</h2>
+            <div class="gold-ornament">✦ ✤ ✦</div>
+
+            <div id="countdown-timer" class="countdown-grid scroll-reveal">
+                <div class="timer-box">
+                    <span id="timer-days" class="timer-value">00</span>
+                    <span class="timer-label">Days</span>
+                </div>
+                <div class="timer-box">
+                    <span id="timer-hours" class="timer-value">00</span>
+                    <span class="timer-label">Hours</span>
+                </div>
+                <div class="timer-box">
+                    <span id="timer-minutes" class="timer-value">00</span>
+                    <span class="timer-label">Minutes</span>
+                </div>
+                <div class="timer-box">
+                    <span id="timer-seconds" class="timer-value">00</span>
+                    <span class="timer-label">Seconds</span>
+                </div>
+            </div>
+            <div id="countdown-complete" class="countdown-complete-msg hidden">
+                <h3>Today is the Day ❤️</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Our Story -->
+    <section id="story" class="section story-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">How It All Began</span>
+                <h2 class="section-title">Our Story</h2>
+                <div class="gold-ornament">✦ ✤ ✦</div>
+            </div>
+
+            <div class="story-timeline">
+                <div class="story-item scroll-reveal">
+                    <div class="story-media">
+                        <img src="images/gallery-1.jpg" alt="How We Met" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-step">Chapter I</span>
+                        <h3 class="story-heading">How We Met</h3>
+                        <p class="story-date">Spring 2021</p>
+                        <p class="story-text">An unexpected conversation at a mutual friend's gathering turned into hours of endless laughter. We realized instantly that our souls shared an undeniable connection.</p>
+                    </div>
+                </div>
+
+                <div class="story-item story-reverse scroll-reveal">
+                    <div class="story-media">
+                        <img src="images/gallery-2.jpg" alt="First Date" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-step">Chapter II</span>
+                        <h3 class="story-heading">Our First Date</h3>
+                        <p class="story-date">Summer 2021</p>
+                        <p class="story-text">A quiet evening over warm coffee quickly escalated into long strolls through the city. Time stood still as we discovered our shared values and dreams.</p>
+                    </div>
+                </div>
+
+                <div class="story-item scroll-reveal">
+                    <div class="story-media">
+                        <img src="images/gallery-3.jpg" alt="The Proposal" onerror="this.src='https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-step">Chapter III</span>
+                        <h3 class="story-heading">The Proposal</h3>
+                        <p class="story-date">Autumn 2025</p>
+                        <p class="story-text">Under a canopy of golden fairy lights and gentle music, Harman got down on one knee. With tears of happiness and pure joy, Sara said Yes!</p>
+                    </div>
+                </div>
+
+                <div class="story-item story-reverse scroll-reveal">
+                    <div class="story-media">
+                        <img src="images/gallery-4.jpg" alt="Our Wedding" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-step">Chapter IV</span>
+                        <h3 class="story-heading">Our Wedding</h3>
+                        <p class="story-date">December 20, 2026</p>
+                        <p class="story-text">Today, surrounded by our beloved families and friends, we step into a new chapter of lifetime togetherness and unconditional love.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Wedding Events -->
+    <section id="events" class="section events-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Join The Celebrations</span>
+                <h2 class="section-title">Wedding Events</h2>
+                <div class="gold-ornament">✦ ✤ ✦</div>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card scroll-reveal">
+                    <div class="event-icon">🌼</div>
+                    <h3 class="event-title">Haldi Ceremony</h3>
+                    <div class="event-details">
+                        <p><strong>Date:</strong> December 18, 2026</p>
+                        <p><strong>Time:</strong> 10:00 AM IST</p>
+                        <p><strong>Venue:</strong> Royal Garden Villa</p>
+                    </div>
+                    <a href="https://maps.google.com/" target="_blank" rel="noopener" class="btn btn-gold btn-sm config-maps-btn">View Location</a>
+                </div>
+
+                <div class="event-card scroll-reveal">
+                    <div class="event-icon">🌿</div>
+                    <h3 class="event-title">Mehndi Night</h3>
+                    <div class="event-details">
+                        <p><strong>Date:</strong> December 19, 2026</p>
+                        <p><strong>Time:</strong> 06:00 PM IST</p>
+                        <p><strong>Venue:</strong> Grand Imperial Courtyard</p>
+                    </div>
+                    <a href="https://maps.google.com/" target="_blank" rel="noopener" class="btn btn-gold btn-sm config-maps-btn">View Location</a>
+                </div>
+
+                <div class="event-card event-highlight scroll-reveal">
+                    <div class="event-badge">Main Event</div>
+                    <div class="event-icon">💍</div>
+                    <h3 class="event-title">Wedding Ceremony</h3>
+                    <div class="event-details">
+                        <p><strong>Date:</strong> December 20, 2026</p>
+                        <p><strong>Time:</strong> 06:00 PM IST</p>
+                        <p><strong>Venue:</strong> The Royal Palace Grand Ballroom</p>
+                    </div>
+                    <a href="https://maps.google.com/" target="_blank" rel="noopener" class="btn btn-gold btn-sm config-maps-btn">View Location</a>
+                </div>
+
+                <div class="event-card scroll-reveal">
+                    <div class="event-icon">🥂</div>
+                    <h3 class="event-title">Reception Party</h3>
+                    <div class="event-details">
+                        <p><strong>Date:</strong> December 21, 2026</p>
+                        <p><strong>Time:</strong> 07:30 PM IST</p>
+                        <p><strong>Venue:</strong> Heritage Luxury Resort</p>
+                    </div>
+                    <a href="https://maps.google.com/" target="_blank" rel="noopener" class="btn btn-gold btn-sm config-maps-btn">View Location</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Multiple Overlay Image Section -->
+    <section id="collage" class="section collage-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Visual Symphony</span>
+                <h2 class="section-title">Moments &amp; Memories</h2>
+                <div class="gold-ornament">✦ ✤ ✦</div>
+            </div>
+
+            <div class="layered-collage-container scroll-reveal">
+                <div class="layered-collage">
+                    <div class="collage-item item-1" data-parallax-speed="0.05">
+                        <img src="images/gallery-1.jpg" alt="Collage Moment 1" onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="collage-item item-2" data-parallax-speed="-0.04">
+                        <img src="images/gallery-2.jpg" alt="Collage Moment 2" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="collage-item item-3" data-parallax-speed="0.06">
+                        <img src="images/gallery-3.jpg" alt="Collage Moment 3" onerror="this.src='https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="collage-item item-4" data-parallax-speed="-0.03">
+                        <img src="images/gallery-4.jpg" alt="Collage Moment 4" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Photo Gallery -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Captured Joy</span>
+                <h2 class="section-title">Photo Gallery</h2>
+                <div class="gold-ornament">✦ ✤ ✦</div>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item scroll-reveal" data-index="0">
+                    <img src="images/gallery-1.jpg" alt="Pre-wedding shoot portrait" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay"><span>Enlarge</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-index="1">
+                    <img src="images/gallery-2.jpg" alt="Traditional Indian Bride" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay"><span>Enlarge</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-index="2">
+                    <img src="images/gallery-3.jpg" alt="Mehndi ceremony hands" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay"><span>Enlarge</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-index="3">
+                    <img src="images/gallery-4.jpg" alt="Couple laughing together" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay"><span>Enlarge</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-index="4">
+                    <img src="images/gallery-5.jpg" alt="Wedding rituals" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay"><span>Enlarge</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal" data-index="5">
+                    <img src="images/gallery-6.jpg" alt="Engagement ring detail" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay"><span>Enlarge</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal" role="dialog" aria-label="Image Lightbox" aria-hidden="true">
+        <button id="lightbox-close" class="lightbox-btn lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <button id="lightbox-prev" class="lightbox-btn lightbox-prev" aria-label="Previous Image">&#10094;</button>
+        <button id="lightbox-next" class="lightbox-btn lightbox-next" aria-label="Next Image">&#10095;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Enlarged gallery view">
+        </div>
+    </div>
+
+    <!-- 9. Full-Width Cinematic Banner -->
+    <section class="cinematic-banner">
+        <div class="cinematic-bg"></div>
+        <div class="cinematic-overlay"></div>
+        <div class="cinematic-content text-center">
+            <blockquote class="cinematic-quote scroll-reveal">
+                "Two hearts, one beautiful journey."
+            </blockquote>
+            <p class="cinematic-sub config-names-inline">Harman &amp; Sara</p>
+        </div>
+    </section>
+
+    <!-- 10. Venue Section -->
+    <section id="venue" class="section venue-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Where We Say I Do</span>
+                <h2 class="section-title">The Venue</h2>
+                <div class="gold-ornament">✦ ✤ ✦</div>
+            </div>
+
+            <div class="venue-card scroll-reveal">
+                <div class="venue-image-col">
+                    <img src="images/hero.jpg" alt="Wedding Venue Location" onerror="this.src='https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80'">
+                </div>
+                <div class="venue-info-col">
+                    <h3 class="venue-name config-venue-name">The Royal Palace Grand Ballroom</h3>
+                    <p class="venue-address config-venue-address">SG Highway, Ahmedabad, Gujarat 380054</p>
+
+                    <div class="venue-meta">
+                        <div class="v-meta-item">
+                            <span class="v-icon">📅</span>
+                            <span class="config-date-str">December 20, 2026</span>
+                        </div>
+                        <div class="v-meta-item">
+                            <span class="v-icon">⏰</span>
+                            <span>06:00 PM IST Onwards</span>
+                        </div>
+                    </div>
+
+                    <p class="venue-description">
+                        Nestled in serene gardens, the venue offers valet parking, air-conditioned banquet halls, and dedicated guest suites for maximum comfort.
+                    </p>
+
+                    <a href="https://maps.google.com/" id="venue-map-link" target="_blank" rel="noopener" class="btn btn-gold config-maps-btn">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. RSVP Section -->
+    <section id="rsvp" class="section rsvp-section">
+        <div class="container">
+            <div class="rsvp-card card scroll-reveal">
+                <div class="text-center">
+                    <span class="section-tag">Are You Attending?</span>
+                    <h2 class="section-title">RSVP</h2>
+                    <div class="gold-ornament">✦ ✤ ✦</div>
+                    <p class="rsvp-subtitle">Please respond by November 20, 2026 to help us make necessary arrangements.</p>
+                </div>
+
+                <form id="rsvp-form" class="rsvp-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="rsvp-name">Full Name *</label>
+                            <input type="text" id="rsvp-name" name="name" required placeholder="e.g. Ananya Sharma">
+                        </div>
+                        <div class="form-group">
+                            <label for="rsvp-email">Email Address *</label>
+                            <input type="email" id="rsvp-email" name="email" required placeholder="e.g. ananya@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="rsvp-phone">Phone Number *</label>
+                            <input type="tel" id="rsvp-phone" name="phone" required placeholder="e.g. +91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="rsvp-guests">Number of Guests *</label>
+                            <select id="rsvp-guests" name="guests" required>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4+ People</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Will You Be Attending? *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="attending" checked>
+                                <span>Will Attend with Joy</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="declining">
+                                <span>Unable to Attend</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rsvp-message">Warm Wishes / Message</label>
+                        <textarea id="rsvp-message" name="message" rows="4" placeholder="Share a blessing or special note for the couple..."></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-gold btn-lg">Send RSVP</button>
+                    </div>
+                </form>
+
+                <div id="rsvp-success" class="rsvp-success-message hidden">
+                    <div class="success-icon">💐</div>
+                    <h3>Thank You!</h3>
+                    <p>Your response has been received. We look forward to celebrating together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Final Couple Section -->
+    <section class="section final-couple-section text-center">
+        <div class="container">
+            <div class="final-card scroll-reveal">
+                <div class="floating-petals" aria-hidden="true">
+                    <span class="petal p1">🌸</span>
+                    <span class="petal p2">🌺</span>
+                    <span class="petal p3">🌸</span>
+                </div>
+                <div class="final-img-frame">
+                    <img src="images/couple-2.jpg" alt="Harman & Sara Final Portrait" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80'">
+                </div>
+                <h2 class="couple-title-display config-names-inline">Harman &amp; Sara</h2>
+                <p class="final-date config-date-str">December 20, 2026</p>
+                <p class="final-quote">"We cannot wait to celebrate the beginning of our forever with you."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Minimalist Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="footer-names config-names-inline">Harman &amp; Sara</p>
+            <p class="footer-tagline">With love, forever.</p>
+            <p class="footer-date config-date-str">December 20, 2026</p>
+        </div>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>
